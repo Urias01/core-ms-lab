@@ -8,7 +8,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.OneToMany;
-import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +18,6 @@ public class Tenant extends BaseEntity {
 
   private String name;
   private String slug;
-  @Email(message = "Invalid email format")
   private String email;
   private String countryCode;
   private String localNumber;
@@ -31,7 +29,6 @@ public class Tenant extends BaseEntity {
 
   public Tenant(
     String name,
-    String slug,
     String email,
     String countryCode,
     String localNumber,
